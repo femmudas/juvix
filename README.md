@@ -1,53 +1,39 @@
-# Juvix
-
-<a href="https://github.com/anoma/juvix"><img align="right" width="300" alt="Tara the Juvix mascot" src="https://github.com/anoma/juvix/raw/main/assets/images/tara-smiling.svg" /></a>
-
-<table>
-<tr>
-<th> CI Status </th>
-</tr>
-<tr>
-<td>
-
-<a
-href="https://github.com/anoma/juvix/actions/workflows/ci.yml"><img
-src="https://github.com/anoma/juvix/actions/workflows/ci.yml/badge.svg"
-alt="The Juvix compiler CI" /></a>
-
-</td>
-</tr>
-<tr>
-<td>
-
-<a
-href="https://github.com/anoma/juvix-nightly-builds/actions/workflows/release-nightly.yaml"><img
-src="https://github.com/anoma/juvix-nightly-builds/actions/workflows/release-nightly.yaml/badge.svg"
-alt="Nightly build, release and benchmark" /></a>
-
-</td>
-</tr>
-<tr>
-<th> Codebase  </th>
-</tr>
-<tr>
-<td><a href="https://github.com/anoma/juvix/tags"><img src="https://img.shields.io/github/v/release/anoma/juvix?include_prereleases"/></a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/anoma/juvix/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/license-GPL--3.0--only-blue.svg"/></a>
-</td>
-</tr>
-<tr>
-<td> <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=102404734&machine=standardLinux32gb&location=WestEurope"><img height="20pt" alt="Open the Juvix Standard Lib in Github Codespace" src="https://github.com/codespaces/badge.svg"/> </a>
-</td>
-</tr>
-</table>
-
-This repository is specifically dedicated to the compiler of the Juvix programming language.
-
-For any Juvix-related inquiries, we strongly advise visiting the following resources.
-
-- [Official documentation](https://docs.juvix.org)
-
-Our documentation offers an in-depth understanding of the Juvix programming language. It encompasses a language reference, examples, blog posts, and numerous other resources to facilitate effective use of Juvix.
+# Juvix 🌟
+A functional programming language for intent-centric and declarative decentralized applications.
+## ✨ Features
+- Functional: Pure functions, immutable data
+- Type-safe: Strong static typing with inference  
+- Intent-centric: Built for Anoma ecosystem
+- Compiles to: WASM, LLVM, native code
+- Zero-knowledge: Integrated ZK proof generation
+## 🚀 Quick Start
+### Installation
+Using snap (Ubuntu/Debian): sudo snap install juvix
+Using brew (macOS): brew install juvix
+From source: git clone https://github.com/anoma/juvix.git && cd juvix && make install
+### Hello World
+Create Hello.juvix: module Hello; open import Stdlib.Prelude; main : IO; main := printStringLn "Hello, Juvix!";
+Compile and run: juvix compile Hello.juvix && ./Hello
+## 📚 Documentation
+Official Docs: https://docs.juvix.org - Complete language reference
+Getting Started: https://docs.juvix.org/getting-started - Step-by-step tutorial
+Language Reference: https://docs.juvix.org/reference - Syntax and semantics
+Examples: https://docs.juvix.org/examples - Code examples
+## 🎯 Examples
+Basic Functions: factorial : Nat -> Nat; factorial zero := 1; factorial (suc n) := suc n * factorial n;
+Data Types: type Tree (A : Type) := | leaf : A -> Tree A | node : Tree A -> Tree A -> Tree A;
+## 🔧 Development
+Building from Source: git clone https://github.com/anoma/juvix.git && cd juvix && make dependencies && make build
+Running Tests: make test
+## 🤝 Contributing
+We welcome contributions! Please see our Contributing Guide for details.
+Good First Issues: https://github.com/anoma/juvix/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+Development Docs: https://docs.juvix.org/development
+## 💬 Community
+Discord: https://discord.gg/anoma - Chat with developers
+Forum: https://forum.anoma.net - Technical discussions
+Matrix: https://matrix.to/#/#juvix:matrix.org - Open protocol chat
+## 📄 License
+Licensed under the GPL-3.0-only License. See LICENSE for details.
+## 🙏 Acknowledgments
+Juvix is developed by Anoma and contributors.
